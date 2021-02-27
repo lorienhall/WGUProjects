@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerScreen">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="461.0" prefWidth="392.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="56.0" prefHeight="386.0" prefWidth="353.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+               <children>
+                  <Button fx:id="CancelB" layoutX="260.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#cancel" text="Cancel" />
+                  <Button fx:id="SaveB" layoutX="193.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#saveCustomer" prefWidth="52.0" text="Save" />
+                  <TextField fx:id="CustIDTF" disable="true" layoutX="160.0" layoutY="32.0" promptText="Auto-Generated" />
+                  <TextField fx:id="AddressTF" layoutX="163.0" layoutY="295.0" />
+                  <TextField fx:id="PostalCTF" layoutX="163.0" layoutY="260.0" />
+                  <TextField fx:id="FullNTF" layoutX="159.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" />
+                  <ComboBox fx:id="FirstLDCB" layoutX="162.0" layoutY="223.0" prefHeight="25.0" prefWidth="149.0" />
+                  <TextField fx:id="PhoneTF" layoutX="159.0" layoutY="104.0" />
+                  <VBox layoutX="17.0" layoutY="32.0" prefHeight="109.0" prefWidth="100.0" spacing="11.0">
+                     <children>
+                        <Label text="Customer ID">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Full Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Phone #">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="17.0" layoutY="189.0" prefHeight="147.0" prefWidth="131.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="80.0" text="Country">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="133.0" text="First Level Divison">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="126.0" text="Postal Code">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="80.0" text="Address">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="CountryCB" layoutX="162.0" layoutY="189.0" prefHeight="25.0" prefWidth="149.0" />
+                  <Line endX="203.00003051757812" layoutX="135.0" layoutY="157.0" startX="-121.00001525878906" stroke="#7e7777" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="97.0" layoutY="14.0" prefHeight="34.0" prefWidth="197.0" text="Add a Customer">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsScreen">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="20.0" prefHeight="505.0" prefWidth="769.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="85.0" prefHeight="351.0" prefWidth="566.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+               <children>
+                  <TableView fx:id="ScheduleReportsTV" layoutX="7.0" layoutY="10.0" prefHeight="332.0" prefWidth="553.0">
+                     <columns>
+                        <TableColumn fx:id="AppIDTC" prefWidth="52.66665267944336" text="App ID" />
+                        <TableColumn fx:id="TitleTC" prefWidth="86.00000762939453" text="Title" />
+                        <TableColumn fx:id="TypeTC" prefWidth="68.0" text="Type" />
+                        <TableColumn fx:id="StartTC" prefWidth="83.33329772949219" text="Start " />
+                        <TableColumn fx:id="EndTC" prefWidth="84.66668701171875" text="End" />
+                        <TableColumn fx:id="CustIDTCapp" minWidth="8.66668701171875" prefWidth="56.0" text="Cust ID" />
+                        <TableColumn fx:id="DescriptionTC" minWidth="8.66668701171875" prefWidth="122.00003051757812" text="Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="ContactPickCB" layoutX="264.0" layoutY="58.0" prefHeight="25.0" prefWidth="152.0" />
+            <Label layoutX="165.0" layoutY="60.0" text="Schedule for">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="345.0" layoutY="14.0" text="Reports">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="ExitB" layoutX="690.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#toMainMenu" prefHeight="25.0" prefWidth="51.0" text="Exit" />
+            <AnchorPane layoutX="589.0" layoutY="85.0" prefHeight="351.0" prefWidth="168.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+               <children>
+                  <TableView fx:id="AppReportTV" layoutX="8.0" layoutY="5.0" prefHeight="339.0" prefWidth="152.0">
+                    <columns>
+                      <TableColumn fx:id="Type" prefWidth="117.0" text="Type" />
+                        <TableColumn fx:id="Num" prefWidth="33.0" text="Num" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="MonthPickCB1" layoutX="618.0" layoutY="58.0" prefHeight="25.0" prefWidth="111.0" />
+            <HBox alignment="BOTTOM_LEFT" layoutX="46.0" layoutY="455.0" prefHeight="34.0" prefWidth="435.0">
+               <children>
+                  <Label text="There were ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NumNewCustL" text="16">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text=" new customers in ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="MonthPickCB2" prefHeight="25.0" prefWidth="109.0" />
+                  <Label prefHeight="25.0" prefWidth="55.0" text=", 2020.">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="TimezoneL" alignment="CENTER_RIGHT" layoutX="541.0" layoutY="7.0" prefHeight="25.0" prefWidth="221.0" text="ETC" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
