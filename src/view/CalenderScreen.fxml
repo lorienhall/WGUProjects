@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalenderScreen">
+   <AnchorPane layoutX="8.0" layoutY="7.0" prefHeight="417.0" prefWidth="764.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+      <AnchorPane layoutX="14.0" layoutY="60.0" prefHeight="345.0" prefWidth="596.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+         <TableView fx:id="ScheduleTV" layoutX="6.0" layoutY="7.0" prefHeight="332.0" prefWidth="584.0">
+            <columns>
+               <TableColumn fx:id="AppIDTC" prefWidth="52.66665267944336" text="App ID" />
+               <TableColumn fx:id="TitleTC" prefWidth="86.00000762939453" text="Title" />
+               <TableColumn fx:id="TypeTC" prefWidth="86.33334350585938" text="Type" />
+               <TableColumn fx:id="StartTC" prefWidth="82.66667175292969" text="Start " />
+               <TableColumn fx:id="EndTC" prefWidth="82.66668701171875" text="End" />
+               <TableColumn fx:id="CustIDTCapp" minWidth="8.66668701171875" prefWidth="56.66668701171875" text="Cust ID" />
+               <TableColumn fx:id="DescriptionTC" minWidth="8.66668701171875" prefWidth="125.0" text="Description" />
+               <TableColumn fx:id="LocationTC" minWidth="8.66668701171875" prefWidth="139.0" text="Location" />
+            </columns>
+         </TableView>
+      </AnchorPane>
+      <Label layoutX="268.0" layoutY="23.0" prefHeight="34.0" prefWidth="100.0" text="Schedule">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <VBox layoutX="634.0" layoutY="60.0" prefHeight="53.0" prefWidth="100.0" spacing="10.0">
+         <RadioButton fx:id="AllAppsRB" layoutX="10.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#viewAll" prefHeight="17.0" prefWidth="86.0" selected="true" text="View all">
+            <toggleGroup>
+               <ToggleGroup fx:id="viewType" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="MonthlyVRB" mnemonicParsing="false" onMouseClicked="#setMonthlyV" text="Monthly view" toggleGroup="$viewType" />
+         <RadioButton fx:id="WeeklyVRB" mnemonicParsing="false" onMouseClicked="#setWeeklyV" text="Weekly view" toggleGroup="$viewType" />
+      </VBox>
+      <VBox alignment="CENTER" layoutX="618.0" layoutY="271.0" prefHeight="131.0" prefWidth="132.0" spacing="10.0">
+         <Button mnemonicParsing="false" onMouseClicked="#addAppointment" prefHeight="25.0" prefWidth="128.0" text="Add Appointment" />
+         <Button mnemonicParsing="false" onMouseClicked="#modifyAppointment" prefHeight="25.0" prefWidth="129.0" text="Modify Appointment" />
+         <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#deleteAppointment" prefHeight="25.0" prefWidth="130.0" text="Delete Appointment" />
+         <Button mnemonicParsing="false" onMouseClicked="#toMainMenu" prefHeight="25.0" prefWidth="52.0" text="Exit" />
+      </VBox>
+      <Button layoutX="658.0" layoutY="137.0" mnemonicParsing="false" onMouseClicked="#nextWeekorMonth" prefHeight="17.0" prefWidth="52.0" text="Next" />
+   </AnchorPane>
+   <Label fx:id="TimezoneL" alignment="CENTER_RIGHT" layoutX="577.0" layoutY="19.0" prefHeight="25.0" prefWidth="189.0" text="ETC" />
+</AnchorPane>
