@@ -1,6 +1,5 @@
 # WGUProjects
-These are projects that I created during my time at Western Govenors University while I was getting my bachelors degree. Each branch contains the zip files for the projects in a different class.
-
+=======
 Software 2
 This is a java project that provides meeting scheduling and customer management. It stores and accesses the nessecary information from a database.
 
@@ -16,4 +15,8 @@ The second task is a basic search and rescue robot that uses infrared sensors to
 
 Scripting and Programming
 This is a C++ project that loads student data and sorts/cleans the data.
+
+Software 1
+This is a java project with a user interface. It was developed to provide an inventory management system. A GUI mockup was provided.
+
 
