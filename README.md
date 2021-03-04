@@ -1,2 +1,2 @@
-# WGUProjects
-These are projects that I created during my time at Western Govenors University while I was getting my bachelors degree. Each branch is a different class.
+# WGUProjects - Scripting and Programming
+This is a C++ project that loads student data and sorts/cleans the data.
