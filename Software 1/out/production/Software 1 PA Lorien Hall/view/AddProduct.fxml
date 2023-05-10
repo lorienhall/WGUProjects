@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+
+   <AnchorPane layoutX="9.0" layoutY="22.0" prefHeight="566.0" prefWidth="833.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+      <Label layoutX="36.0" layoutY="26.0" prefHeight="19.0" prefWidth="91.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="PartsTV" layoutX="435.0" layoutY="59.0" prefHeight="174.0" prefWidth="384.0" style="-fx-border-color: gray;">
+         <columns>
+            <TableColumn fx:id="PartsTVID" prefWidth="74.0" text="Part ID" />
+            <TableColumn fx:id="PartsTVN" prefWidth="91.0" text="Part Name" />
+            <TableColumn fx:id="PartsTVInv" prefWidth="98.0" text="Inventory Level" />
+            <TableColumn fx:id="PartsTVP" prefWidth="120.0" text="Price/ Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="AddAssociatedPartB" layoutX="692.0" layoutY="246.0" mnemonicParsing="false" onAction="#addAssociatedPart" prefWidth="54.0" text="Add" />
+      <TableView fx:id="AssociatedPartT" layoutX="435.0" layoutY="283.0" prefHeight="174.0" prefWidth="384.0" style="-fx-border-color: gray;">
+         <columns>
+            <TableColumn fx:id="APartTVID" prefWidth="74.0" text="Part ID" />
+            <TableColumn fx:id="APartTVN" prefWidth="91.0" text="Part Name" />
+            <TableColumn fx:id="APartTVInv" prefWidth="98.0" text="Inventory Level" />
+            <TableColumn fx:id="APartTVP" prefWidth="120.0" text="Price/ Cost per Unit" />
+         </columns>
+      </TableView>
+      <TextField fx:id="SearchPartsF" layoutX="593.0" layoutY="23.0" prefHeight="25.0" prefWidth="164.0" promptText="Search by Part ID or Name" />
+      <Button fx:id="removeAssociatePartB" layoutX="647.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#removeAssociatedPart" text="Remove Associated Part" />
+      <Button fx:id="saveProductB" layoutX="647.0" layoutY="514.0" mnemonicParsing="false" onAction="#onActionSaveProduct" text="Save" />
+      <Button fx:id="cancelB" layoutX="737.0" layoutY="514.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" />
+      <VBox layoutX="113.0" layoutY="133.0" prefHeight="84.0" prefWidth="164.0" spacing="20.0">
+         <TextField fx:id="AProductID" disable="true" promptText="Auto Gen - Disabled" />
+         <TextField fx:id="AProductName" />
+      </VBox>
+      <TextField fx:id="AProductMin" layoutX="277.0" layoutY="313.0" prefHeight="25.0" prefWidth="62.0" />
+      <VBox layoutX="113.0" layoutY="223.0" prefHeight="205.0" prefWidth="91.0" spacing="20.0">
+         <TextField fx:id="AProductI" />
+         <TextField fx:id="AProductP" />
+         <TextField fx:id="AProductMax" layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="94.0" />
+      </VBox>
+      <Label layoutX="235.0" layoutY="317.0" text="Min" />
+      <VBox layoutX="55.0" layoutY="138.0" prefHeight="200.0" prefWidth="52.0" spacing="27.0">
+         <Label prefHeight="17.0" prefWidth="21.0" text="ID" />
+         <Label prefHeight="17.0" prefWidth="41.0" text="Name" />
+         <Label prefHeight="17.0" prefWidth="21.0" text="Inv" />
+         <Label prefHeight="17.0" prefWidth="32.0" text="Price" />
+         <Label prefHeight="17.0" prefWidth="32.0" text="Max" />
+      </VBox>
+      <Button fx:id="SearchPartsB" layoutX="763.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchParts" text="Search" />
+   </AnchorPane>
+</AnchorPane>
